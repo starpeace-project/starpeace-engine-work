@@ -1,0 +1,55 @@
+{
+  "name": "ronappleton/starpeace-engine-work",
+  "description": "Php engine for economy based simulator",
+  "keywords": [
+    "starpeace",
+    "engine",
+    "economy",
+    "simulation"
+  ],
+  "minimum-stability": "dev",
+  "license": "",
+  "type": "project",
+  "authors": [
+    {
+      "name": "Ron Appleton",
+      "email": "ron.appleton@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.5.9",
+    "illuminate/database": "5.2.*",
+    "illuminate/events": "5.2.*",
+    "illuminate/cache": "5.2.*",
+    "illuminate/filesystem": "5.2.*",
+    "luracast/config": "2.*",
+    "vlucas/phpdotenv": "~1.0",
+    "league/flysystem": "~1.0",
+    "illuminate/pagination": "5.2.*",
+    "doctrine/dbal": "^2.8@dev"
+  },
+  "require-dev": {
+    "illuminate/console": "5.2.*",
+    "psy/psysh": "0.7.*",
+    "symfony/process": "3.0.*"
+  },
+  "autoload": {
+    "classmap": [
+      "app/commands",
+      "app/models",
+      "app/database/migrations",
+      "app/database/seeds"
+    ],
+    "psr-0": {
+      "": "app/controllers"
+    },
+    "psr-4": {
+      "Bootstrap\\": "bootstrap/",
+      "Spengine\\": "app",
+      "EcoSim\\": "EcoSim"
+    },
+    "files": [
+      "functions.php"
+    ]
+  }
+}
