@@ -1,0 +1,181 @@
+Building desirability's
+
+This document pertains to the desirability calculations of building and covers considerations and facts needed to be incorporated when
+calculating desirability's.
+
+The list of desirability's:
+
+building_condition_desirability
+building_crime_desirability
+building_civil_service_desirability
+building_services_desirability
+building_leisure_desirability
+building_population_desirability
+building_pollution_desirability
+building_beauty_desirability
+building_commute_desirability
+
+
+Considerations
+
+Buildings perhaps have the highest array of desirability's because everything placed on a map is a building
+within our simulation.
+
+The Business model, as in the model we are looking at here is the inherited model for all map based entities,
+so business, factory, office, residence, civil service, leisure facility.
+
+The purpose of the desirability's is to either attract or repel population, as in real life, even low desirability
+will attract population because the natural method to combat desirability is price, whether that be the price of a
+product such as food or the rent of an apartment. For this reason price desirability will carry a heavier weight than
+for example pollution desirability, and in real world recognition of this fact, it is an uncommon result that desirability
+of any building is negative, however, this must be possible, in order to repel population, or in other terms, restrict the
+desirability of a building, or again in another way, as described in the original game notes, to restrict the fluid of
+population reaching a building.
+
+Building Condition Desirability
+
+Building condition desirability will be based upon maintenance and researches that affect buildings, while carrying
+increases in environment, beauty, security etcetera will in fact all alter the condition desirability in regards of
+maintenance of that building, so for example, although a buildings maintenance cost can be zero, research can still
+produce desirability for a building, however should a research have a monthly cost to it, then zero maintenance will
+render that boost to desirability as useless as if not paid for it cannot be considered. In this way it is fair.
+However, we must also take care to ensure that a monthly cost for a maintenance out ways the straight maintenance
+cost to the building, so for example if we pay $300 a month for air conditioning, then we should save on maintenance
+fees for the building, so we could reduce the maintenance we pay for the building by $300 a month and still receive a boost in
+desirability that out weighs the cost so for example, even though we reduce the maintenance cost by $300 a month because
+we are paying $300 a month in fees for the boost it would in fact look to the buildings desirability as if we are actually
+spending an extra $100 a month on maintenance.
+
+Or in another sense, if we pay $300 a month maintenance on a building, and have air conditioning research then as far as the
+building maintenance desirability is concerned, we are spending $400 on maintenance!
+
+However, having air conditioning research on a building is a commitment to spending so if we were to also have research for
+gardening at $200 a month, that would be a commitment of $500 spending a month on that building, so in one sense we would
+think that if we are only paying $400 a month on maintenance of that building so we should not include the gardening boost.
+In fact, as we are breaking our spending commitment on that building, we will penalise the player by removing all boosts
+applied to that buildings maintenance by committed spending so even if they are are paying the committed $300 for the air
+conditioning, they still will not receive the boost because they are committed to the gardening also.
+While the above is not truly representational of real life, it will reduce getting into a quagmire of extra calculation
+to decide what boost to remove because the maintenance budget is not high enough. It is the players responsibility to ensure
+that they are paying there bills.
+
+As a base for consideration, Paying 100% maintenance will be considered the building maintenance desirability of 100%
+and any extra spending will raise that desirability above 100%, so if air condition represents 10% of the maintenance budget,
+if the player does not reduce the maintenance budget of the building after the air conditioning research then the boost to
+maintenance desirability of that building will be 2.5% or total 102.5 desirability, and if they were to reduce there maintenance
+budget by 2.5% then their building maintenance desirability will still be 100
+
+Decay factors
+
+If a player consistently under budgets a buildings maintenance budget then it will cause a decay factor which will eat away at
+their building condition desirability each round, the decay factor will be accumulating at a rate to be determined, but for example
+if a player under budgets by ten percent, we will reduce desirability by 1 each round, so the first under budget round will have
+a decay of 1 des, then the next round 2 des then the next round 3 des and so on. To undo the decay factor, the player will have
+three options, 1. pay full maintenance each round and the decay factor will stop. 2. over budget the maintenance budget each round
+(only possible with research) and the decay factor will reduce by the overspend each round. 3. Pay to repair the building manually
+to remove the decay factor.
+
+On master play level, we will also introduce rental charge reductions in line with decay factor, so that the amount the player
+can charge for the buildings rent will be pushed below that of the local areas average rent for the building of that class.
+We will also remove the possibility to repair the building manually, in that way the consequence for under budgeting maintenance
+is far greater and will in turn give the player incentive to have good maintenance to help increase prosperity.
+
+
+Crime Desirability
+
+Crime desirability will generally be a negative effect on overall desirability of a building, the mitigation of which will only
+be possible by the coverage of police services, and the distance from those police services. Local area crime will be based upon
+a random generated number on a base percentage of the population, so for example if an area has no law, then up to 20% of the
+population may partake in illegal activities, which will negatively affect that area, however the amount of that 20% that are involved
+in crime will be based upon a random generated number, the closer in proximity the police service is, the lower the overall percentage
+of population will be that consider crime, the optimum distance for 0 crime being for example 10km (each map tile as 1km example)
+so for each block further away over 10 blocks, the risk of crime increases by 2% of the population which would make the maximum
+distance for an 18% population involvement risk of crime would be 15 block, note these are example figures and conceptional.
+
+
+Civil Service Desirability
+
+Civil service desirability is a positive desirability factor and is based on the approximate location of local services, being
+fire, health and education, while not having these services will not create any negative affect to desirability, having them
+will increase the desirability of an area thus a building. The desirability factor will be a possible 99 based on the three
+services however for example eduction will be affected by all four levels of education, primary, secondary, college and university.
+Health will have both general practice and hospital, both making up 60% of the possible 33% of the possible desirability level,
+what this does is enable a health boost in desirability of an area that has access to both services, so the 33% that health makes
+up could actually be 33% plus a possible 6% making a service boost possibility of 105%. We will have various buildings that make
+up that of a university as long as the buildings are within x range of each other they will represent an extra boost to eduction
+for example if we have say a university library, medical wing, fire wing, police wing, agricultural wing, business wing, and political
+wing as well as that of a university building the those buildings can represent a boost to the education factor, that factor will
+cover the entire town/city also, in this way towns can have a university 'area', we could also incorporate commercial boosts to
+the area within a proximity of the university and residential desirability boost also.
+
+The considerations to this area will be thought out in a separate document as the possibilities here are great.
+
+
+Building Services Desirability
+
+This in short will be the factor of requirement of advertising, software and legal services, the level of a building
+will play part in the requirement of the services and the attainment of the services will make up the overall effect
+of the desirability factor generated by the services.
+
+In master level play, we will also include branding requirements of products within commercial areas also, in this
+way we can introduce buildings to master level play that will not be available in lower level play as they would have no
+desirability impact in that way.
+
+Again with these three services the levels of supply and demand make, build the desirability factor of the buildings
+service desirability factor. Branding will be considered as a boost to these initial desirability figures.
+
+
+Building Leisure Desirability
+
+Building leisure desirability will enable us to introduce leisure buildings into Starpeace, a missing and long cried
+for addition to the game. They will have two levels, one will be environmental boosts and the other will be both
+environmental and commercial boost, one type will only cost money, the other will make money, they will both increase
+building leisure desirability but the type that makes money will cost vastly more initially than those that don't.
+
+For example we could have a swimming pool (only costs money) but provides a good boost to local residential facilities
+and two a nascar race track, which would cost vastly more money to build and maintain but would represent a boost to
+residential desirability, commercial desirability locally and population desirability on a town level.
+
+
+Building Pollution Desirability
+
+Building pollution desirability will be another negative factor within the game, and will negatively affect beauty,
+lower acceptable commute distance thereby affecting residential and commercial desirability and also population desirability
+levels for different types of residential buildings, being as high class population are less fond of it than lower class
+who dislike it but don't really care that much about it.
+
+As in the original game, different buildings will omit differing levels of pollution, but will produce an accumulating level
+when grouped within a distance of each other, in this way, I expect to see better thought out layouts of towns and less occurrence
+of the massive groupings that occur on the edges of towns in the current game version.
+
+All buildings that omit pollution will also have available research to reduce their own level of pollution and in turn there effect
+within groups of polluting areas. Modern practices have massively reduced pollution and should be brought into the game, the
+reductions in carbon footprints and global warming being two.
+
+
+Building Beauty Desirability
+
+Building beauty desirability will affect local area beauty and collective beauty will have an increased effect on the buildings
+within that area, in this way attention to beauty can have a larger effect than beauty in today's game.
+All positive desirability affecting buildings should have beauty effects for the local area, in this way prosperous towns and cities
+will gain from there prosperity and will become a force against the negative effect of pollution.
+For example if an area of beauty is close to an area of pollution, the effect of that pollution may have more of an effect on
+the cost of health care within the area than the overall desirability of a residential building.
+
+This is more realistic and introduces another new factor of play and balance within the game.
+
+Building Commute Desirability
+
+Building commute desirability is not present in the current game iteration and is an importantly overlooked fact,
+The distance of a residential space from an employment space should negatively affect the desirability of that residential building,
+the reason this is important is that is will lead to more realistically set out towns and cities.
+
+In the current game you can build one hundred hospitals on the edge of a town and it will increase the population of middle class on
+the other side of the town. It is unrealistic and causes a massive glut of overbuilding to increase population, while in reality
+people will commute large distances to work, they are less likely to do so regardless of the wage as often the longer commute
+entails a larger cost of that commute, we need to find a level that combats this in the simulation to reduce the appeal to players
+to overbuild. It is one of the most complained about facts of today's game.
+
+
+
+

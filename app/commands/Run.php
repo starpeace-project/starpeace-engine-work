@@ -22,6 +22,13 @@ class Run extends Command {
 	 */
 	protected $description = 'This command will engage the simulation engine.';
 
+    /**
+     * This controls the speed of the simulation
+     *
+     * @var int $tickDelaySeconds
+     */
+	private $roundDelaySeconds = 2;
+
 	/**
 	 * Create a new command instance.
 	 *
@@ -39,15 +46,11 @@ class Run extends Command {
 	 */
 	public function fire()
 	{
-	    $this->info('Engine started.');
+	    $this->info('Engine starting.....');
 
-	    $this->info('Building Database in memory..');
-        \Artisan::call('migrate', [
-            '--force' => true,
-        ]);
-        $this->info('Migrations to create database have run.');
-
-
+	    $this->runMigrations();
+	    $this->defineStartTime();
+        $this->runEngine();
 	}
 
 	/**
@@ -76,4 +79,79 @@ class Run extends Command {
 //		);
 	}
 
+    /**
+     * This method is responsible for creating the table structure in the sqlite database being held
+     * in memory.
+     *
+     * To build extra structure we only need to add the migrations for them.
+     * Migrations are being used to allow for development of the structure, instead of altering the
+     * same table definitions all the time as columns etc are added we just add a new migration which
+     * will do the extra work.
+     */
+	private function runMigrations()
+    {
+        $this->info('Building Database in memory..');
+        \Artisan::call('migrate', [
+            '--force' => true,
+        ]);
+        $this->info('Migrations to create database have run.');
+    }
+
+    private function defineStartTime()
+    {
+        define('ENGINE_START', microtime(true));
+        $this->info('Engine start defined: ' . ENGINE_START);
+    }
+
+    private function getEndTime() {
+	    return microtime(true);
+    }
+
+    private function getRunningTime()
+    {
+        return microtime(true) - ENGINE_START;
+    }
+
+    private function runEngine()
+    {
+        while (true) {
+            $loop_start_time = microtime(true);
+
+            $this->calculate();
+
+            $loop_end_time = microtime(true);
+
+            $this->storeRoundData();
+            $this->updateExternalData();
+
+            sleep($this->roundDelaySeconds);
+        }
+    }
+
+    private function calculate()
+    {
+        /**
+         * First thing we do is fetch the data to work on.
+         */
+        $start_data = $this->fetchExternalData();
+    }
+
+    private function fetchExternalData()
+    {
+        /**
+         * Here we will fetch the data we start with from the mysql server.
+         *
+         * We will fetch it each time the loop starts.
+         */
+    }
+
+    private function storeRoundData()
+    {
+
+    }
+
+    private function updateExternalData()
+    {
+
+    }
 }

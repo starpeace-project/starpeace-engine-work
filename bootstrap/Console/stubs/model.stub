@@ -1,11 +1,14 @@
 <?php
 
+namespace Spengine;
+
+use Illuminate\Database\Eloquent\Model;
 softdelete:import/**
  * Class class:name
  *
  * comment:properties
  */
-class class:name extends Eloquent
+class class:name extends Model
 {
     softdelete:use
     /**
