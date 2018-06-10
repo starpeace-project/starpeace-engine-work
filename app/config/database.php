@@ -50,10 +50,10 @@ return array(
 
 		'mysql' => array(
 			'driver'    => 'mysql',
-			'host'      => '127.0.0.1',
-			'database'  => 'database',
-			'username'  => 'root',
-			'password'  => '',
+			'host'      => env("EXTERNAL_DB_HOST", '123.123.123.123'),
+			'database'  => env("EXTERNAL_DB_NAME", 'external_database_name'),
+			'username'  => env("EXTERNAL_DB_USERNAME", 'user'),
+			'password'  => env("EXTERNAL_DB_PASSWORD", 'password'),
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',

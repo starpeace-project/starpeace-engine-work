@@ -1,29 +1,29 @@
 <?php
 
-namespace Spengine;
+namespace Spengine\external_models;
 
 use Illuminate\Database\Eloquent\Model;
-softdelete:import/**
- * Class class:name
+/**
+ * Class ExternalBuilding
  *
- * comment:properties
+ * 
  */
-class class:name extends Model
+class ExternalBuilding extends Model
 {
-    softdelete:use
+    protected $connection = "mysql";
     /**
      * Indicates if the model should be timestamped.
      *
      * @var bool
      */
-    public $timestamps = table:timestamps;
+    public $timestamps = true;
 
     /**
      * The database table used by the model.
      *
      * @var string
      */
-    protected $table = 'table:name';
+    protected $table = 'external_buildings';
 
     /**
      * The attributes that are mass assignable.
@@ -31,7 +31,7 @@ class class:name extends Model
      * @var array
      */
     protected $fillable = [ //TODO: edit fillable
-        table:fillable
+        
     ];
 
     /**
@@ -40,7 +40,8 @@ class class:name extends Model
      * @var array
      */
     protected $hidden = [
-        table:hidden
+        'password',
+        'secret'
     ];
 
 }
