@@ -14,7 +14,7 @@ building_population_desirability
 building_pollution_desirability
 building_beauty_desirability
 building_commute_desirability
-
+building_investment_desirability
 
 Considerations
 
@@ -176,6 +176,8 @@ people will commute large distances to work, they are less likely to do so regar
 entails a larger cost of that commute, we need to find a level that combats this in the simulation to reduce the appeal to players
 to overbuild. It is one of the most complained about facts of today's game.
 
+Building Investment Desirability
 
+Building investment desirability is all about 
 
 
