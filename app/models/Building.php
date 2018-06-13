@@ -11,7 +11,6 @@ use Illuminate\Database\Eloquent\Model;
  * @param string building_name
  * @param integer building_location_x
  * @param integer building_location_y
- * @param integer building_age_desirability
  * @param integer building_condition_desirability
  * @param integer building_crime_desirability
  * @param integer building_civil_service_desirability
@@ -21,7 +20,6 @@ use Illuminate\Database\Eloquent\Model;
  * @param integer building_pollution_desirability
  * @param integer building_beauty_desirability
  * @param integer building_commute_desirability
- * @param integer building_class_desirability
  * @param integer building_connection_desirability
  *
  */

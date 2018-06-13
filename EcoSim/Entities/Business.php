@@ -10,7 +10,7 @@ use EcoSim\Tools\Calculator;
  */
 class Business extends Building
 {
-    const DEBUG = true;
+    const DEBUG = false;
     protected $required_products = [];
     protected $output_products = [];
     protected $jobs_required = [];
@@ -31,9 +31,9 @@ class Business extends Building
      * @param $class
      * @return int|mixed
      */
-    public function getCurrentWorkers($class) {
-        if (empty($this->current_workers[$class])) {
-            return 0;
+    public function getCurrentWorkers($class=null) {
+        if (empty($class)) {
+            return $this->current_workers;
         }
         return $this->current_workers[$class];
     }

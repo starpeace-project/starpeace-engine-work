@@ -46,7 +46,7 @@ class PopulationClass
 
     public function setPool($value)
     {
-        echo "Adding {$value} Workers to the {$this->getClass()} pool" . PHP_EOL;
+        echo self::DEBUG ? "Adding {$value} Workers to the {$this->getClass()} pool" . PHP_EOL : '';
         $this->pool += $value;
     }
 
@@ -152,7 +152,7 @@ class PopulationClass
     }
 
     public function setRequiredPopulation($value) {
-        echo "Setting Required Population, adding {$value}" . PHP_EOL;
+        echo self::DEBUG ? "Setting Required Population, adding {$value}" . PHP_EOL : '';
         $this->required_population = $value;
     }
 
