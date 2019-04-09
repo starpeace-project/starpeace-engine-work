@@ -16,6 +16,7 @@ use EcoSim\Tools\DisplayTables;
 
 class Run extends Command {
 
+    const ENGINE_VERSION = 5.1;
 	/**
 	 * The console command name.
 	 *
@@ -64,6 +65,7 @@ class Run extends Command {
 	 */
 	public function fire()
 	{
+	    $this->info('Engine Version ' . self::ENGINE_VERSION);
 	    $this->info('Engine starting.....');
 
 	    $this->runMigrations();
